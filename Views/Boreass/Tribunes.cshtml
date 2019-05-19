@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Boreass.Models.DbModels.Tribunes>
+    @{
+        ViewBag.Title = "Tribunes";
+    }
+<environment include="Development">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</environment>
+    <h2>Tribunes</h2>
+    <table class="table">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>brand</th>
+            <th>type</th>
+            <th>altitude</th>
+            <th>potential</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Altitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Potential)
+            </td>
+        </tr>
+        }
+    </table>

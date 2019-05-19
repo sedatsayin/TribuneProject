@@ -1,0 +1,41 @@
+﻿<environment include="Development">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</environment>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Boreass</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container" style="padding-top:5%">
+    <h2>Giriş</h2>
+    <form action="/Login/Index" method="post">
+        <div class="form-group">
+            <label>Kullanıcı Adı</label>
+            <input type="text" class="form-control" name="Username" value="" />
+        </div>
+        <div class="form-group">
+            <label>Şifre</label>
+            <input type="password" name="Password" class="form-control" value="" />
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" name="name" value="Giriş" />
+        </div>
+    </form>
+</div>
